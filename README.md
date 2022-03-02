@@ -6,13 +6,13 @@ A demo to implement web crawlers based on the concept of FaaS, it takes a event-
 
 ### Architecture
 
-![Architecture](./imgs/arch.png)
+![Architecture](https://user-images.githubusercontent.com/251222/156396901-13987963-1693-470e-b396-9a3f0806aa6b.png)
 
 ### Test Result
 
 with default SCF quota:
 
-![Demo](./imgs/demo.png)
+![Demo](https://user-images.githubusercontent.com/251222/156396912-6173299b-d085-40bf-8889-2582a13172d0.png)
 
 ### Website:
  - Sample Index Page: https://www.thriftbooks.com/browse/#b.s=bestsellers-desc&b.p=1&b.pp=50&b.nr
