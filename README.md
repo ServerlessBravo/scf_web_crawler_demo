@@ -20,10 +20,9 @@ with default SCF quota:
 
 
 ### Todo
-- [ ] Loading the url of proxy API from environments
+- [x] Loading the url of proxy API from environments
 - [x] Add the architecture diagram
 - [ ] Deploy to SCF with `Serverless Framework`
-- [ ] Implement the image downloader tasks
 - [ ] Routing the image download task to another SCF function
 
  
@@ -99,8 +98,27 @@ docker build . -t xxxxx.tencentcloudcr.com/yyyyy/web_crawler_proxy:v0.1
 Run proxy server on local:
 
 ```bash
-export PROXY_VENDOR_API="http://....../getip"
+export PROXY_VENDOR_API="http://proxy.vendor.com/getip?xxxxx=yyyyy"
 docker run -e PROXY_VENDOR_API=$PROXY_VENDOR_API --rm -it -p 9000:9000 xxxx.tencentcloudcr.com/yyyyyy/web_crawler_proxy:v0.1
+```
+
+## Environment Variables
+
+scf_web_crawler:
+
+```bash
+CHECK_PUBLIC_IP=False
+EB_WEBHOOK=https://service-xxxx-yyy.gz.apigw.tencentcs.com/release/
+ENV=prod
+LOG_LEVEL=DEBUG
+PROXY_ENABLED=True
+PROXY_SERVER_BASE_URL=https://service-xxxxx-yyyyy.gz.apigw.tencentcs.com/release
+```
+
+Proxy Server:
+
+```bash
+PROXY_VENDOR_API=http://proxy.vendor.com/getip?xxxxx=yyyyy
 ```
 ## Vendor Dependencies
 
