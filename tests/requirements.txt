@@ -1,0 +1,6 @@
+requests==2.26.0
+beautifulsoup4==4.10.0
+httpretty==1.1.4
+sanic-testing==0.8.2
+pytest==6.2.5
+debugpy==1.5.1
